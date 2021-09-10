@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    
+}
+
+<div class="text-center">
+    <h1 class="display-4">Benvenuto @User.Identity.Name</h1>
+    
+</div>
+<br />
+<br />
+<br />
+<br />
+<center>
+    <a asp-controller="Timesheets" asp-action="Index" class="btn btn-primary"><i class="fas fa-calendar-alt fa-6x"></i>    Timesheets</a>
+    <a asp-controller="Clienti" asp-action="Index" class="btn btn-primary"><i class="fas fa-industry fa-6x"></i>     Clienti</a>
+    <a asp-controller="Statistiche" asp-action="Index" class="btn btn-primary"><i class="fas fa-chart-area fa-6x"></i>     Statistiche</a>
+</center>

@@ -1,0 +1,56 @@
+﻿@model Avanade.AllocationMonitor.MVC.Models.EmployeeDetailsViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div>
+    <h1><i class="fas fa-users fa-2x"></i>    Scheda di @Model.NomeCompleto</h1>
+    <a asp-action="Annulla"><i class="fas fa-redo align-content-end fa-2x fa-align-right"></i></a>
+</div>
+
+<div>
+   
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NomeCompleto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NomeCompleto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataDiNascita)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataDiNascita)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataInizioProfessione)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataInizioProfessione)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CostoOrario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CostoOrario)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Mansione)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Mansione)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-controller="Employee" asp-action="Annulla" class="btn btn-primary">Chiudi</a>
+</div>

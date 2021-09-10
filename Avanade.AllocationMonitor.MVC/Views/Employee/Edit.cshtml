@@ -1,0 +1,67 @@
+﻿@model Avanade.AllocationMonitor.MVC.Models.EmployeeEditViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div>
+    <h1><i class="fas fa-users fa-2x"></i>    Aggiorna dipendente esistente</h1>
+    @*<a asp-action="Annulla"><i class="fas fa-redo align-content-end fa-2x"></i></a>*@
+</div>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label hidden asp-for="Id" class="control-label"></label>
+                <input hidden asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cognome" class="control-label"></label>
+                <input asp-for="Cognome" class="form-control" />
+                <span asp-validation-for="Cognome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataNascita" class="control-label"></label>
+                <input asp-for="DataNascita" class="form-control" />
+                <span asp-validation-for="DataNascita" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataInizioProfessione" class="control-label"></label>
+                <input asp-for="DataInizioProfessione" class="form-control" />
+                <span asp-validation-for="DataInizioProfessione" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mansione" class="control-label"></label>
+                @Html.DropDownListFor(model => model.Mansione, ViewBag.Mansioni as List<SelectListItem>,
+               "---Seleziona una mansione---", new { @class = "form-control", required = "required" })
+                <span asp-validation-for="Mansione" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CostoOrario" class="control-label"></label>
+                <input asp-for="CostoOrario" class="form-control" />
+                <span asp-validation-for="CostoOrario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Aggiorna" class="btn btn-primary" />
+                <a asp-controller="Employee" asp-action="Annulla" class="btn btn-primary">Annulla</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
